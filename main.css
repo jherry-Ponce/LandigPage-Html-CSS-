@@ -1,0 +1,346 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+/* agregue max-width */
+.container {
+  width: 1440px;
+  max-width: 100%;
+  margin: auto;
+}
+.conteiner {
+  background-image: url(./images/bg-hero-desktop.svg);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  margin: 0 1em;
+}
+
+.logo {
+  height: 30px;
+}
+
+.button1 {
+  background-color: white;
+  box-shadow: 10px 10px 10px gray;
+  font-size: 18px;
+  padding: 10px 40px;
+  border-radius: 20px;
+}
+/* flex-wrap para ajustar el contenido */
+.banner {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap-reverse;
+}
+/* tartar con mediaquery */
+/* padding el texto no debe estar al nivel de la imagen */
+.banner-content {
+  width: 40%;
+  padding: 1.5em;
+}
+
+.parrafo1 {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 20px;
+  margin-top: 40px;
+}
+.button2 {
+  background-color: rebeccapurple;
+  color: white;
+  font-size: 18px;
+  padding: 10px 40px;
+  border-radius: 20px;
+  margin-top: 40px;
+}
+/* agregue max width para evitar que la imagen desborde */
+.imagen1 {
+  width: 650px;
+  max-width: 100%;
+  height: 500px;
+}
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 8em;
+}
+.section1 {
+  margin: 3em;
+  width: 85%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  border: 1px solid gray;
+  border-radius: 10px;
+  padding: 2em;
+  gap: 3em;
+}
+.section1 section {
+  width: 100%;
+}
+
+.section1 img {
+  width: 100%;
+}
+h2 {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 30px;
+}
+p {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 20px;
+  color: gray;
+  text-align: justify;
+}
+/* trabaje con porcentajes */
+.section2 {
+  width: 35%;
+  border: 1px solid gray;
+  padding: 3em;
+  position: absolute;
+  bottom: -17em;
+  background-color: white;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.section2 button {
+  background-color: #fe52c0;
+  font-size: 20px;
+  padding: 10px 20px;
+  border-radius: 20px;
+  margin-top: 2em;
+}
+/* aplicar mediaquery debido a los flex el flex wrap no responde */
+footer {
+  margin-top: 12em;
+  background-color: #00252e;
+  padding: 8em 3em 3em 3em;
+  color: white;
+}
+footer .footer {
+  display: flex;
+}
+.footer-section1 {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  width: 25%;
+}
+.footer-section1 .img {
+  width: 15em;
+  filter: invert(0.7);
+}
+.footer-datos {
+  display: flex;
+  gap: 1em;
+}
+.footer-datos img {
+  height: 1em;
+}
+.footer-section2 {
+  align-items: center;
+  justify-content: center;
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  gap: 1em;
+}
+.icono {
+  display: flex;
+  align-self: center;
+}
+.icono img {
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: 50%;
+}
+.footer-section3 {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.footer-section3 .img {
+  display: none;
+}
+
+.lineas {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 40px;
+  white-space: nowrap;
+  border-right: 2px solid black;
+  overflow: hidden;
+}
+
+.texto-animado-dos {
+  animation: texto-animado-dos 5s steps(144) 4s infinite both,
+    cursor 0.5s steps(50) infinite normal;
+}
+
+@keyframes texto-animado-dos {
+  0% ,100% {
+    width: 0;
+  }
+
+  50% {
+    width: 100%;
+  }
+}
+
+@keyframes cursor {
+  from {
+    border-right-color: red;
+  }
+
+  to {
+    border-right-color: transparent;
+  }
+}
+@media only screen and (max-width: 1180px) {
+  .banner-content {
+    width: 70%;
+    padding: 1.5em;
+    text-align: center;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .section2 {
+    width: 60%;
+    border: 1px solid gray;
+    padding: 1.5em;
+    position: absolute;
+    bottom: -14em;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .section2 button {
+    background-color: #fe52c0;
+    font-size: 20px;
+    padding: 10px 20px;
+    border-radius: 20px;
+    margin-top: 2em;
+  }
+  footer {
+    margin-top: 6em;
+    background-color: #00252e;
+    padding: 8em 1.5em 3em 1.5em;
+  }
+  footer .footer {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  .footer-section1 {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    width: 100%;
+  }
+  .footer-section1 .img {
+    width: 15em;
+    filter: invert(0.7);
+  }
+  .footer-datos {
+    display: flex;
+    gap: 1em;
+  }
+  .footer-datos img {
+    height: 1em;
+  }
+  .footer-section2 {
+    align-items: flex-start;
+    width: 100%;
+    margin-top: 1em;
+    gap: 1em;
+  }
+  .icono {
+    display: flex;
+    align-self: flex-start;
+  }
+  .icono img {
+    width: 1.5em;
+    height: 1.5em;
+    border-radius: 50%;
+  }
+  .footer-section3 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-top: 1em;
+    gap: 1em;
+  }
+
+  .lineas {
+    display: block;
+    font-size: 40px;
+    white-space: nowrap;
+    overflow: hidden;
+    
+  }
+
+  .texto-animado-dos {
+    animation: texto-animado-dos 5s steps(12),
+      cursor 0.5s infinite step-end alternate;
+  }
+
+  @keyframes texto-animado-dos {
+    from {
+        width: 100%;
+    }
+
+    to {
+      
+        width: 0;
+    }
+  }
+
+  @keyframes cursor {
+    from {
+      border-right-color: red;
+    }
+
+    to {
+      border-right-color: transparent;
+    }
+  }
+}
+@media only screen and (max-width: 480px) {
+  .section1 {
+    display: block;
+
+    padding: 1em;
+    margin: 1em 3em;
+  }
+  .section1 section {
+    margin: 1em auto;
+  }
+  .section2 {
+    bottom: -13em;
+    text-align: center;
+  }
+  .section2 h2 {
+    font-size: 1.5em;
+  }
+  .section2 button {
+    font-size: 0.8em;
+    padding: 8px 15px;
+    border-radius: 20px;
+    margin-top: 2em;
+  }
+}
