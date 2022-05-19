@@ -2,6 +2,25 @@
   margin: 0;
   padding: 0;
 }
+body {
+  font-family: "Poppins", sans-serif;
+}
+h2 {
+  font-size: 25px;
+  margin-bottom: 1em;
+}
+p {
+  font-size: 18px;
+  color: gray;
+  text-align: justify;
+  line-height: 1.3em;
+}
+a{
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
+  
+}
 /* agregue max-width */
 .container {
   width: 1440px;
@@ -10,32 +29,37 @@
 }
 .conteiner {
   background-image: url(./images/bg-hero-desktop.svg);
+  background-color: #edfbfe;
 }
-
+/* header */
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 100px;
-  margin: 0 1em;
+  margin: 0 3em;
 }
 
 .logo {
-  height: 30px;
+  height: 2em;
 }
 
 .button1 {
   background-color: white;
-  box-shadow: 10px 10px 10px gray;
-  font-size: 18px;
-  padding: 10px 40px;
-  border-radius: 20px;
+  box-shadow: 2px 2px 5px 1px gray;
+  font-size: 17px;
+  padding: 14px 80px;
+  border-radius: 30px;
+  border: none;
+  font-weight: 600;
+  color: #1b363d;
 }
 /* flex-wrap para ajustar el contenido */
 .banner {
   display: flex;
   justify-content: space-around;
-  flex-wrap: wrap-reverse;
+  flex-wrap: wrap;
+  margin-top: 2em;
 }
 /* tartar con mediaquery */
 /* padding el texto no debe estar al nivel de la imagen */
@@ -45,17 +69,19 @@
 }
 
 .parrafo1 {
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   font-size: 20px;
-  margin-top: 40px;
+  margin-top: 2.5em;
+  color: #56696e;
 }
 .button2 {
-  background-color: rebeccapurple;
+  background-color: #ff9bdb;
   color: white;
-  font-size: 18px;
-  padding: 10px 40px;
-  border-radius: 20px;
-  margin-top: 40px;
+  font-weight: 600;
+  padding: 15px 50px;
+  border: none;
+  box-shadow: 2px 2px 2px 2px #f8d5f3;
+  border-radius: 30px;
+  margin-top: 2.5em;
 }
 /* agregue max width para evitar que la imagen desborde */
 .imagen1 {
@@ -69,16 +95,18 @@
   align-items: center;
   justify-content: center;
   position: relative;
+  margin-top: 4em;
   margin-bottom: 8em;
 }
 .section1 {
-  margin: 3em;
+  margin: 2em;
   width: 85%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-wrap: nowrap;
-  border: 1px solid gray;
+  border: none;
+  box-shadow: 0 0 0.4em rgba(128, 128, 128, 0.516);
   border-radius: 10px;
   padding: 2em;
   gap: 3em;
@@ -90,35 +118,31 @@
 .section1 img {
   width: 100%;
 }
-h2 {
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  font-size: 30px;
-}
-p {
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  font-size: 20px;
-  color: gray;
-  text-align: justify;
-}
+
 /* trabaje con porcentajes */
 .section2 {
   width: 35%;
-  border: 1px solid gray;
+  box-shadow: 0 0 0.4em rgba(128, 128, 128, 0.516);
   padding: 3em;
+  /*   height: 11em; */
   position: absolute;
   bottom: -17em;
   background-color: white;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  align-items: center;
 }
 .section2 button {
-  background-color: #fe52c0;
+  background-color: #ff9bdb;
   font-size: 20px;
   padding: 10px 20px;
-  border-radius: 20px;
-  margin-top: 2em;
+  border-radius: 40px;
+  margin-top: 1em;
+  border: none;
+  color: white;
+  font-weight: 600;
+  box-shadow: 2px 2px 2px 2px #eeecfa;
 }
 /* aplicar mediaquery debido a los flex el flex wrap no responde */
 footer {
@@ -128,7 +152,7 @@ footer {
   color: white;
 }
 footer .footer {
-  display: flex;
+  display: flex; 
 }
 .footer-section1 {
   display: flex;
@@ -137,8 +161,11 @@ footer .footer {
   width: 25%;
 }
 .footer-section1 .img {
+  object-position: center;
+  object-fit: cover;
   width: 15em;
-  filter: invert(0.7);
+  height:5em ;
+  color: white;
 }
 .footer-datos {
   display: flex;
@@ -165,22 +192,20 @@ footer .footer {
   height: 1.5em;
   border-radius: 50%;
 }
+
 .footer-section3 {
   width: 25%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
 }
-.footer-section3 .img {
-  display: none;
-}
 
 .lineas {
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  font-size: 40px;
+  font-size: 2.5em;
   white-space: nowrap;
   border-right: 2px solid black;
   overflow: hidden;
+  width: 90%;
 }
 
 .texto-animado-dos {
@@ -189,7 +214,8 @@ footer .footer {
 }
 
 @keyframes texto-animado-dos {
-  0% ,100% {
+  0%,
+  100% {
     width: 0;
   }
 
@@ -215,6 +241,16 @@ footer .footer {
   }
 }
 @media only screen and (max-width: 700px) {
+   
+  .logo {
+    width: 180px;
+    height: 2em;
+  }
+  
+  .button1 {
+    font-size: 20px;
+    padding: 0.5em 2.5em;
+  }
   .section2 {
     width: 60%;
     border: 1px solid gray;
@@ -245,14 +281,7 @@ footer .footer {
     flex-wrap: wrap;
   }
   .footer-section1 {
-    display: flex;
-    flex-direction: column;
-    gap: 1em;
     width: 100%;
-  }
-  .footer-section1 .img {
-    width: 15em;
-    filter: invert(0.7);
   }
   .footer-datos {
     display: flex;
@@ -267,20 +296,18 @@ footer .footer {
     margin-top: 1em;
     gap: 1em;
   }
-  .icono {
-    display: flex;
-    align-self: flex-start;
-  }
+  
   .icono img {
-    width: 1.5em;
-    height: 1.5em;
+    width: 2em;
+    height: 2em;
+    margin-left: 1em auto;
     border-radius: 50%;
   }
   .footer-section3 {
     width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     justify-content: flex-start;
     margin-top: 1em;
     gap: 1em;
@@ -291,7 +318,6 @@ footer .footer {
     font-size: 40px;
     white-space: nowrap;
     overflow: hidden;
-    
   }
 
   .texto-animado-dos {
@@ -301,12 +327,11 @@ footer .footer {
 
   @keyframes texto-animado-dos {
     from {
-        width: 100%;
+      width: 100%;
     }
 
     to {
-      
-        width: 0;
+      width: 0;
     }
   }
 
@@ -320,11 +345,30 @@ footer .footer {
     }
   }
 }
-@media only screen and (max-width: 480px) {
-  .section1 {
-    display: block;
+@media only screen and (max-width: 550px) {
+  p , h2{
+    text-align: center;
+  }
 
-    padding: 1em;
+  .logo {
+    width: 100px;
+    height: 2em;
+  }
+  
+  .button1 {
+    font-size: 17px;
+    padding: 0.5em 2em;
+  }
+  /* impar */
+  .section1:nth-child(odd) {
+    flex-wrap: wrap-reverse;
+    padding: 1.5em;
+    margin: 1em 3em;
+  }
+  /* par */
+  .section1:nth-child(even) {
+    flex-wrap: wrap;
+    padding: 1.5em;
     margin: 1em 3em;
   }
   .section1 section {
