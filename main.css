@@ -22,6 +22,9 @@ a{
   color: white;
   
 }
+a:hover{
+  text-decoration: underline;
+}
 /* agregue max-width */
 .container {
   width: 1440px;
@@ -55,6 +58,7 @@ a{
   border: none;
   font-weight: 600;
   color: #1b363d;
+  cursor: pointer;
 }
 /* flex-wrap para ajustar el contenido */
 .banner {
@@ -76,6 +80,7 @@ a{
   color: #56696e;
 }
 .button2 {
+  cursor: pointer;
   background-color: #fd30b2;
   color: white;
   font-weight: 600;
@@ -84,6 +89,10 @@ a{
   box-shadow: 2px 2px 2px 2px #f8d5f3;
   border-radius: 30px;
   margin-top: 2.5em;
+}
+.button2:hover {
+  
+  background-color: #ff9bdb;
 }
 /* agregue max width para evitar que la imagen desborde */
 .imagen1 {
@@ -150,6 +159,9 @@ a{
   color: white;
   font-weight: 600;
   box-shadow: 2px 2px 2px 2px #eeecfa;
+}
+.section2 button:hover{
+  background-color: #ff9bdb;
 }
 /* aplicar mediaquery debido a los flex el flex wrap no responde */
 footer {
@@ -323,17 +335,17 @@ footer .footer {
   }
 
   .texto-animado-dos {
-    animation: texto-animado-dos 5s steps(12),
-      cursor 0.5s infinite step-end alternate;
+    animation: texto-animado-dos 5s steps(144) 4s infinite both,
+    cursor 0.5s steps(50) infinite normal ;
   }
 
   @keyframes texto-animado-dos {
-    from {
-      width: 100%;
+    0%, 100% {
+      width: 0;
     }
 
-    to {
-      width: 0;
+    50% {
+      width: 100%;
     }
   }
 
