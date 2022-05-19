@@ -133,6 +133,9 @@ a{
   flex-direction: column;
   align-items: center;
 }
+.section2 h2 {
+  text-align: center;
+}
 .section2 button {
   background-color: #ff9bdb;
   font-size: 20px;
@@ -252,15 +255,10 @@ footer .footer {
     padding: 0.5em 2.5em;
   }
   .section2 {
-    width: 60%;
-    border: 1px solid gray;
+    width: 80%;
+    border: none;
     padding: 1.5em;
-    position: absolute;
     bottom: -14em;
-    background-color: white;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
     justify-content: center;
   }
   .section2 button {
@@ -357,7 +355,7 @@ footer .footer {
   
   .button1 {
     font-size: 17px;
-    padding: 0.5em 2em;
+    padding: 0.5em 1.5em;
   }
   /* impar */
   .section1:nth-child(odd) {
@@ -375,16 +373,18 @@ footer .footer {
     margin: 1em auto;
   }
   .section2 {
+    width: 85%;
     bottom: -13em;
     text-align: center;
+    padding: 1.5em 0.5em;
   }
   .section2 h2 {
-    font-size: 1.5em;
+    font-size: 1em;
   }
   .section2 button {
     font-size: 0.8em;
     padding: 8px 15px;
     border-radius: 20px;
-    margin-top: 2em;
+    margin-top: 1em;
   }
 }
